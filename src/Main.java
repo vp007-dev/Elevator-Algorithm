@@ -38,12 +38,12 @@ public class Main {
             }
 
             if (floorsInDirection.isEmpty()) {
-                // Reverse direction if no floors in current direction
+                
                 direction = direction.equals("up") ? "down" : "up";
                 continue;
             }
 
-            // Sort floors in direction
+           
             floorsInDirection.sort((a, b) -> direction.equals("up") ? a - b : b - a);
 
             for (int destination : floorsInDirection) {
@@ -58,8 +58,7 @@ public class Main {
 
     public void moveToFloor(int floor) {
         System.out.println("Moving from Floor " + currentFloor + " to Floor " + floor);
-        // Simulated movement delay if needed
-        // Thread.sleep(2000); // Uncomment if used in real threaded implementation
+        
         System.out.println("Arrived at Floor " + floor);
     }
 }
